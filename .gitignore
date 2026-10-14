@@ -8,6 +8,11 @@ __pycache__/
 venv/
 ENV/
 
+# Dados locais gerados pela aplicação
+tarefas.json
+tarefas.json.corrompido-*
+*.tmp
+
 # Ferramentas e sistema operacional
 .pytest_cache/
 .mypy_cache/

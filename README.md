@@ -1,6 +1,6 @@
 # TaskTracker - Bootcamp II
 
-Aplicação de linha de comando para cadastrar e consultar tarefas com prioridade, data limite e status.
+Aplicação de linha de comando para cadastrar, consultar, filtrar e gerenciar tarefas. Os dados ficam salvos localmente em JSON e continuam disponíveis ao reabrir o programa.
 
 ## Tecnologias
 
@@ -15,8 +15,9 @@ tasktracker-projeto/
 ├── .gitignore
 ├── docs/
 │   └── planejamento_logico.pdf
-└── src/
-    └── main.py
+├── src/
+│   └── main.py
+└── tarefas.json  # criado automaticamente ao salvar a primeira tarefa
 ```
 
 ## Instalação e execução
@@ -31,7 +32,15 @@ Em alguns sistemas, use `python3 src/main.py`.
 
 ## Como usar
 
-No menu, escolha `1` para cadastrar uma tarefa, `2` para listar as tarefas cadastradas ou `3` para sair. O título não pode ficar vazio. A prioridade aceita Alta, Média (ou Media) e Baixa. As tarefas ficam em memória enquanto o programa está aberto.
+No menu, escolha:
+
+1. Cadastrar tarefa. O título é obrigatório; prioridades aceitas: Alta, Média (ou Media) e Baixa. A data pode ser livre ou uma data válida no formato DD/MM/AAAA.
+2. Listar todas as tarefas.
+3. Alternar o status entre Pendente e Concluída ou excluir uma tarefa (com confirmação).
+4. Filtrar tarefas por prioridade ou status.
+5. Sair.
+
+As alterações são salvas automaticamente em `tarefas.json`. Se o JSON estiver inválido ou não seguir o formato esperado, uma cópia de segurança com o sufixo `.corrompido-<data>` é preservada antes de iniciar uma lista vazia.
 
 ## Planejamento
 
